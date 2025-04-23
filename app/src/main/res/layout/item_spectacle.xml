@@ -2,13 +2,12 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="6dp"
-    app:cardUseCompatPadding="true">
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,19 +17,18 @@
         <ImageView
             android:id="@+id/iv_spectacle"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="220dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/placeholder_concert"
-            tools:ignore="ContentDescription" />
+            android:src="@drawable/placeholder_concert"/>
 
-        <!-- Barre d'information -->
+        <!-- Barre d'information transparente -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/iv_spectacle"
+            android:layout_alignBottom="@id/iv_spectacle"
             android:background="#80000000"
             android:orientation="vertical"
-            android:padding="12dp">
+            android:padding="16dp">
 
             <!-- Titre -->
             <TextView
@@ -38,29 +36,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:maxLines="1"
                 android:ellipsize="end"/>
 
-            <!-- Date et Heure -->
+            <!-- Date et Lieu - Version compacte -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:layout_marginEnd="4dp"
-                    android:src="@drawable/ic_time"
+                    android:src="@drawable/ic_date"
                     android:tint="@color/white"/>
 
                 <TextView
-                    android:id="@+id/tv_heure"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:textColor="@color/white"
                     android:textSize="14sp"/>
 
@@ -69,35 +68,14 @@
                     android:layout_height="16dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="4dp"
-                    android:src="@drawable/ic_date"
-                    android:tint="@color/white"/>
-
-                <TextView
-                    android:id="@+id/tv_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"/>
-            </LinearLayout>
-
-            <!-- Lieu -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="4dp"
                     android:src="@drawable/ic_location"
                     android:tint="@color/white"/>
 
                 <TextView
                     android:id="@+id/tv_lieu"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:textColor="@color/white"
                     android:textSize="14sp"/>
             </LinearLayout>

@@ -12,7 +12,12 @@ public class SpectacleDTO {
     private Integer nbSpectateurs;
     private String nomLieu;
     private String imageUrl; // Ajoutez ce champ
+    private BigDecimal price;
 
+    // Ajoutez le getter
+    public BigDecimal getPrice() {
+        return price;
+    }
     // ... autres champs et méthodes
 
     public String getImageUrl() {
